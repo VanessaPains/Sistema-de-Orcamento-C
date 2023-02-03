@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\FornecedorController.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Fornecedores.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ClienteModel.cs" />
     <Compile Include="Model\FornecedorModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

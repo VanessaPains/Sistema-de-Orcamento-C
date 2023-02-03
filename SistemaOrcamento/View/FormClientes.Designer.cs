@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.dgClientes = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lbluscar = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -43,6 +41,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCadastroClientes = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.dgClientes = new System.Windows.Forms.DataGridView();
+            this.lbluscar = new System.Windows.Forms.Label();
+            this.txtBuscarCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +60,6 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "PRC Sytems @";
             // 
-            // dgClientes
-            // 
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(311, 105);
-            this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(479, 308);
-            this.dgClientes.TabIndex = 35;
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +69,7 @@
             this.btnSalvar.TabIndex = 34;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
@@ -84,6 +80,7 @@
             this.btnEditar.TabIndex = 33;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -94,6 +91,7 @@
             this.btnExcluir.TabIndex = 32;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -101,50 +99,42 @@
             this.btnNovo.Location = new System.Drawing.Point(472, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
-            this.btnNovo.TabIndex = 31;
+            this.btnNovo.TabIndex = 4;
             this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(593, 72);
+            this.txtBuscar.Location = new System.Drawing.Point(516, 72);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(197, 21);
+            this.txtBuscar.Size = new System.Drawing.Size(274, 21);
             this.txtBuscar.TabIndex = 30;
-            // 
-            // lbluscar
-            // 
-            this.lbluscar.AutoSize = true;
-            this.lbluscar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluscar.Location = new System.Drawing.Point(526, 75);
-            this.lbluscar.Name = "lbluscar";
-            this.lbluscar.Size = new System.Drawing.Size(61, 13);
-            this.lbluscar.TabIndex = 29;
-            this.lbluscar.Text = "BUSCAR:";
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // txtTelefone
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(95, 132);
+            this.txtTelefone.Location = new System.Drawing.Point(86, 159);
             this.txtTelefone.Mask = "(00) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(197, 21);
-            this.txtTelefone.TabIndex = 28;
+            this.txtTelefone.TabIndex = 2;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(95, 159);
+            this.txtEmail.Location = new System.Drawing.Point(86, 186);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(197, 21);
-            this.txtEmail.TabIndex = 26;
+            this.txtEmail.TabIndex = 3;
             // 
             // lblEndereco
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(38, 162);
+            this.lblEndereco.Location = new System.Drawing.Point(29, 189);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(51, 13);
             this.lblEndereco.TabIndex = 25;
@@ -154,7 +144,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(13, 135);
+            this.lblTelefone.Location = new System.Drawing.Point(4, 162);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(76, 13);
             this.lblTelefone.TabIndex = 24;
@@ -163,16 +153,16 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(95, 105);
+            this.txtNome.Location = new System.Drawing.Point(86, 132);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(197, 21);
-            this.txtNome.TabIndex = 22;
+            this.txtNome.TabIndex = 1;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(42, 108);
+            this.lblNome.Location = new System.Drawing.Point(33, 135);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(47, 13);
             this.lblNome.TabIndex = 21;
@@ -188,11 +178,61 @@
             this.lblCadastroClientes.TabIndex = 20;
             this.lblCadastroClientes.Text = "CADASTRO DE CLIENTES";
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(86, 105);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(88, 21);
+            this.txtCodigo.TabIndex = 37;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(19, 108);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(61, 13);
+            this.lblCodigo.TabIndex = 38;
+            this.lblCodigo.Text = "CODIGO:";
+            // 
+            // dgClientes
+            // 
+            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgClientes.Location = new System.Drawing.Point(311, 105);
+            this.dgClientes.Name = "dgClientes";
+            this.dgClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgClientes.Size = new System.Drawing.Size(479, 308);
+            this.dgClientes.TabIndex = 35;
+            this.dgClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellClick);
+            // 
+            // lbluscar
+            // 
+            this.lbluscar.AutoSize = true;
+            this.lbluscar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluscar.Location = new System.Drawing.Point(356, 75);
+            this.lbluscar.Name = "lbluscar";
+            this.lbluscar.Size = new System.Drawing.Size(61, 13);
+            this.lbluscar.TabIndex = 29;
+            this.lbluscar.Text = "BUSCAR:";
+            // 
+            // txtBuscarCod
+            // 
+            this.txtBuscarCod.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarCod.Location = new System.Drawing.Point(423, 72);
+            this.txtBuscarCod.Name = "txtBuscarCod";
+            this.txtBuscarCod.Size = new System.Drawing.Size(87, 21);
+            this.txtBuscarCod.TabIndex = 39;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBuscarCod);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.btnSalvar);
@@ -221,13 +261,11 @@
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgClientes;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label lbluscar;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEndereco;
@@ -235,5 +273,10 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCadastroClientes;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DataGridView dgClientes;
+        private System.Windows.Forms.Label lbluscar;
+        private System.Windows.Forms.TextBox txtBuscarCod;
     }
 }

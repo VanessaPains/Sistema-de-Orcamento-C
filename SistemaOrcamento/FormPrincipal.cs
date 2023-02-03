@@ -28,5 +28,11 @@ namespace SistemaOrcamento
             FormFornecedores form = new FormFornecedores();//ir parapagina de 
             form.ShowDialog();
         }
+
+        private void cLIENTESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClientes form = new FormClientes();//ir parapagina de 
+            form.ShowDialog();
+        }
     }
 }

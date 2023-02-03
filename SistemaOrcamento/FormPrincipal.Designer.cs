@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cADASTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.oRÇAMENTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nOVOORÇAMENTOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iMPRIMIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRODUTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fORNECEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uNIDADESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oRÇAMENTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nOVOORÇAMENTOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iMPRIMIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,37 +67,6 @@
             this.cADASTROSToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.cADASTROSToolStripMenuItem.Text = "CADASTROS";
             // 
-            // oRÇAMENTOSToolStripMenuItem
-            // 
-            this.oRÇAMENTOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nOVOORÇAMENTOToolStripMenuItem,
-            this.iMPRIMIRToolStripMenuItem});
-            this.oRÇAMENTOSToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("oRÇAMENTOSToolStripMenuItem.Image")));
-            this.oRÇAMENTOSToolStripMenuItem.Name = "oRÇAMENTOSToolStripMenuItem";
-            this.oRÇAMENTOSToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
-            this.oRÇAMENTOSToolStripMenuItem.Text = "ORÇAMENTOS";
-            // 
-            // sAIRToolStripMenuItem
-            // 
-            this.sAIRToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sAIRToolStripMenuItem1});
-            this.sAIRToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sAIRToolStripMenuItem.Image")));
-            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.sAIRToolStripMenuItem.Text = "SAIR";
-            // 
-            // nOVOORÇAMENTOToolStripMenuItem
-            // 
-            this.nOVOORÇAMENTOToolStripMenuItem.Name = "nOVOORÇAMENTOToolStripMenuItem";
-            this.nOVOORÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.nOVOORÇAMENTOToolStripMenuItem.Text = "NOVO ORÇAMENTO";
-            // 
-            // iMPRIMIRToolStripMenuItem
-            // 
-            this.iMPRIMIRToolStripMenuItem.Name = "iMPRIMIRToolStripMenuItem";
-            this.iMPRIMIRToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.iMPRIMIRToolStripMenuItem.Text = "IMPRIMIR";
-            // 
             // pRODUTOSToolStripMenuItem
             // 
             this.pRODUTOSToolStripMenuItem.Name = "pRODUTOSToolStripMenuItem";
@@ -116,6 +85,7 @@
             this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
             this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
+            this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
             // 
             // uNIDADESToolStripMenuItem
             // 
@@ -123,10 +93,41 @@
             this.uNIDADESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.uNIDADESToolStripMenuItem.Text = "UNIDADES";
             // 
+            // oRÇAMENTOSToolStripMenuItem
+            // 
+            this.oRÇAMENTOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nOVOORÇAMENTOToolStripMenuItem,
+            this.iMPRIMIRToolStripMenuItem});
+            this.oRÇAMENTOSToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("oRÇAMENTOSToolStripMenuItem.Image")));
+            this.oRÇAMENTOSToolStripMenuItem.Name = "oRÇAMENTOSToolStripMenuItem";
+            this.oRÇAMENTOSToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.oRÇAMENTOSToolStripMenuItem.Text = "ORÇAMENTOS";
+            // 
+            // nOVOORÇAMENTOToolStripMenuItem
+            // 
+            this.nOVOORÇAMENTOToolStripMenuItem.Name = "nOVOORÇAMENTOToolStripMenuItem";
+            this.nOVOORÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.nOVOORÇAMENTOToolStripMenuItem.Text = "NOVO ORÇAMENTO";
+            // 
+            // iMPRIMIRToolStripMenuItem
+            // 
+            this.iMPRIMIRToolStripMenuItem.Name = "iMPRIMIRToolStripMenuItem";
+            this.iMPRIMIRToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.iMPRIMIRToolStripMenuItem.Text = "IMPRIMIR";
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sAIRToolStripMenuItem1});
+            this.sAIRToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sAIRToolStripMenuItem.Image")));
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            // 
             // sAIRToolStripMenuItem1
             // 
             this.sAIRToolStripMenuItem1.Name = "sAIRToolStripMenuItem1";
-            this.sAIRToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.sAIRToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
             this.sAIRToolStripMenuItem1.Text = "SAIR";
             this.sAIRToolStripMenuItem1.Click += new System.EventHandler(this.sAIRToolStripMenuItem1_Click);
             // 
