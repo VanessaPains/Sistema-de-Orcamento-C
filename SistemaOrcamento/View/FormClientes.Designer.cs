@@ -45,7 +45,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.lbluscar = new System.Windows.Forms.Label();
-            this.txtBuscarCod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,26 +210,17 @@
             // 
             this.lbluscar.AutoSize = true;
             this.lbluscar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluscar.Location = new System.Drawing.Point(356, 75);
+            this.lbluscar.Location = new System.Drawing.Point(449, 75);
             this.lbluscar.Name = "lbluscar";
             this.lbluscar.Size = new System.Drawing.Size(61, 13);
             this.lbluscar.TabIndex = 29;
             this.lbluscar.Text = "BUSCAR:";
-            // 
-            // txtBuscarCod
-            // 
-            this.txtBuscarCod.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCod.Location = new System.Drawing.Point(423, 72);
-            this.txtBuscarCod.Name = "txtBuscarCod";
-            this.txtBuscarCod.Size = new System.Drawing.Size(87, 21);
-            this.txtBuscarCod.TabIndex = 39;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtBuscarCod);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label7);
@@ -277,6 +267,5 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dgClientes;
         private System.Windows.Forms.Label lbluscar;
-        private System.Windows.Forms.TextBox txtBuscarCod;
     }
 }

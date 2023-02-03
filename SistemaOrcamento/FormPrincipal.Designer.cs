@@ -72,6 +72,7 @@
             this.pRODUTOSToolStripMenuItem.Name = "pRODUTOSToolStripMenuItem";
             this.pRODUTOSToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pRODUTOSToolStripMenuItem.Text = "PRODUTOS";
+            this.pRODUTOSToolStripMenuItem.Click += new System.EventHandler(this.pRODUTOSToolStripMenuItem_Click);
             // 
             // fORNECEDORESToolStripMenuItem
             // 
@@ -92,6 +93,7 @@
             this.uNIDADESToolStripMenuItem.Name = "uNIDADESToolStripMenuItem";
             this.uNIDADESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.uNIDADESToolStripMenuItem.Text = "UNIDADES";
+            this.uNIDADESToolStripMenuItem.Click += new System.EventHandler(this.uNIDADESToolStripMenuItem_Click);
             // 
             // oRÇAMENTOSToolStripMenuItem
             // 
@@ -108,6 +110,7 @@
             this.nOVOORÇAMENTOToolStripMenuItem.Name = "nOVOORÇAMENTOToolStripMenuItem";
             this.nOVOORÇAMENTOToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.nOVOORÇAMENTOToolStripMenuItem.Text = "NOVO ORÇAMENTO";
+            this.nOVOORÇAMENTOToolStripMenuItem.Click += new System.EventHandler(this.nOVOORÇAMENTOToolStripMenuItem_Click);
             // 
             // iMPRIMIRToolStripMenuItem
             // 

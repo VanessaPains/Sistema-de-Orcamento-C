@@ -34,5 +34,23 @@ namespace SistemaOrcamento
             FormClientes form = new FormClientes();//ir parapagina de 
             form.ShowDialog();
         }
+
+        private void uNIDADESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUnidades form = new FormUnidades();//ir parapagina de 
+            form.ShowDialog();
+        }
+
+        private void pRODUTOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProdutos form = new FormProdutos();//ir parapagina de 
+            form.ShowDialog();
+        }
+
+        private void nOVOORÇAMENTOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormOrcamentos form = new FormOrcamentos();//ir parapagina de 
+            form.ShowDialog();
+        }
     }
 }

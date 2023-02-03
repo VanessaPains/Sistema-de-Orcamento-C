@@ -50,6 +50,7 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="Controller\ClienteController.cs" />
     <Compile Include="Controller\FornecedorController.cs" />
+    <Compile Include="Controller\UnidadeController.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Fornecedores.cs" />
     <Compile Include="Entidades\Orcamentos.cs" />
@@ -63,6 +64,7 @@
     </Compile>
     <Compile Include="Model\ClienteModel.cs" />
     <Compile Include="Model\FornecedorModel.cs" />
+    <Compile Include="Model\UnidadeModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\FormClientes.cs">
